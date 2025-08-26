@@ -336,9 +336,8 @@ This solution delivers automated daily reporting and visualization, enabling bus
 
 ## 🖼️ Example Output
 
-- Cleaned sales data: `cleaned_data.csv`  
-- Visual sales trend multi-chart:  
-![Sales Trend Chart][5]
+- Cleaned sales data: [cleaned_data.csv](https://github.com/AnalystVivek/Daily-Sales-Data-Automation/blob/main/cleaned_data.csv)  
+- Visual sales trend multi-chart: [Sales Trend Chart](https://github.com/AnalystVivek/Daily-Sales-Data-Automation/blob/main/sales_trend.png)
 
 ---
 
