@@ -219,8 +219,8 @@ def send_email(subject, body, to_emails, attachments):
 
     SMTP_SERVER = 'smtp.gmail.com'
     SMTP_PORT = 587
-    EMAIL_ADDRESS = 'resume.vivekpattnaik@gmail.com'
-    EMAIL_PASSWORD = 'quqm xzkk nxeu lmob'
+    EMAIL_ADDRESS = '***********@gmail.com'
+    EMAIL_PASSWORD = '*************'
 
     msg = EmailMessage()
     msg['Subject'] = subject
@@ -264,7 +264,7 @@ def etl_process():
         upload_to_google_drive()              # Upload CSV to Google Drive
 
         # Send email with the chart attached
-        receivers = ['vivek.pattnaik@gmail.com', 'vivekpattnaikgst@gmail.com']
+        receivers = ['example1@gmail.com', 'example2@gmail.com']
         send_email(
             subject="Daily Sales Report & Sales trend Chart",
             body="Please find attached Sales data with Sales trend chart.",
@@ -299,7 +299,35 @@ if __name__ == "__main__":
 Implements industry-standard job scheduling to ensure the pipeline runs consistently every morning, maximizing operational efficiency.
 
 ---
+## Log Data & Executed Output
 
+```ruby
+2025-08-26 18:52:42,946 - INFO - ETL process started.
+2025-08-26 18:52:42,947 - INFO - Starting data extraction from MySQL database.....
+2025-08-26 18:52:43,010 - INFO - Data extraction completed. Extracted 968 records.
+2025-08-26 18:52:43,010 - INFO - Starting data cleaning and transformation .....
+2025-08-26 18:52:43,016 - INFO - After removing duplicates and nulls, 19 records were removed. 949 records remain.
+2025-08-26 18:52:43,018 - INFO - Removed 5 outlier records based on unit_price.
+2025-08-26 18:52:43,021 - INFO - Data cleaning and transformation completed Sucessfully.
+2025-08-26 18:52:43,030 - INFO - Saved cleaned data to cleaned_data.csv successfully.
+2025-08-26 18:52:43,030 - INFO - Starting sales trend chart creation.....
+2025-08-26 18:52:44,406 - INFO - Sales trend chart saved as sales_trend.png successfully.
+2025-08-26 18:52:44,406 - INFO - Starting upload to Google Drive.....
+2025-08-26 18:52:51,164 - INFO - Successfully retrieved access token
+2025-08-26 18:52:51,174 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-08-26 18:52:53,966 - INFO - Uploaded cleaned_data.csv to Google Drive successfully.
+2025-08-26 18:52:53,966 - INFO - Starting email sending process.....
+2025-08-26 18:52:59,922 - INFO - Email sent successfully.
+2025-08-26 18:52:59,922 - INFO - ETL process and Email sending completed.
+2025-08-26 18:52:59,923 - INFO - Scheduled ETL process to run daily at 7 AM. is completed...
+```
+- Drive Screenshot:
+<img width="2539" height="781" alt="drive ss" src="https://github.com/user-attachments/assets/dea691a1-7a60-4828-a6d0-b3b7841c736a" />
+
+- Mail Screenshot:
+<img width="1267" height="620" alt="mail ss" src="https://github.com/user-attachments/assets/462d0d2f-77b3-452c-88ac-226e1f5a72e2" />
+
+---
 ## 📈 Project Impact in Real-World Environments
 
 This solution delivers automated daily reporting and visualization, enabling business teams to make informed, rapid decisions by accessing high-quality, cleaned data and actionable product sales trends with zero manual effort. Automation of data cleaning, outlier detection, chart creation, secure sharing, and professional communication demonstrates mastery of the full analytics pipeline—crucial for driving business value in fast-paced industries.
