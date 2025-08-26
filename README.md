@@ -301,7 +301,7 @@ Implements industry-standard job scheduling to ensure the pipeline runs consiste
 ---
 ## Log Data & Executed Output
 
-```ruby
+```
 2025-08-26 18:52:42,946 - INFO - ETL process started.
 2025-08-26 18:52:42,947 - INFO - Starting data extraction from MySQL database.....
 2025-08-26 18:52:43,010 - INFO - Data extraction completed. Extracted 968 records.
